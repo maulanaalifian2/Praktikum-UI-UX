@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .browser-header {
+            border: 1px solid #000;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .browser-header .nav-buttons {
+            display: flex;
+            gap: 5px;
+            margin-right: 10px;
+        }
+        .browser-header .nav-buttons div {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000;
+        }
+        .browser-header .address-bar {
+            flex-grow: 1;
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        .browser-header .search-bar {
+            width: 150px;
+            border: 1px solid #000;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .menu-bar {
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .menu-bar a {
+            text-decoration: none;
+            color: #000;
+        }
+        .main-content {
+            display: flex;
+            gap: 20px;
+        }
+        .image-placeholder {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #ccc;
+        }
+        .product-details {
+            flex-grow: 1;
+        }
+        .product-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-details td {
+            padding: 5px 0;
+        }
+        .product-details .label {
+            width: 120px;
+        }
+        .product-details input[type="text"],
+        .product-details select {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #000;
+        }
+        .product-details .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .product-details .checkbox-group input[type="checkbox"] {
+            margin: 0;
+        }
+        .pay-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .pay-button button {
+            background-color: #008000;
+            color: #fff;
+            border: 1px solid #000;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="browser-header">
+        <div class="nav-buttons">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="address-bar">http://</div>
+        <div class="search-bar"></div>
+    </div>
+
+    <div class="menu-bar">
+        <a href="#">Home</a>
+        <a href="#">Register</a>
+        <a href="#">Policy</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="main-content">
+        <img src="smsng.jpg" alt="Produk">
+        <div class="product-details">
+            <table>
+                <tr>
+                    <td class="label">Title Here:</td>
+                    <td>Samsung A55 5G</td>
+                </tr>
+                <tr>
+                    <td class="label">Description:</td>
+                    <td>Year: 2024<br>Model:RAM 8 ROM 256 <br>Condition: Like  New</td>
+                </tr>
+                <tr>
+                    <td class="label">Total Amount:</td>
+                    <td>Rp 4.200.000</td>
+                </tr>
+                <tr>
+                    <td class="label">Pay to:</td>
+                    <td>0110335099</td>
+                </tr>
+                <tr>
+                    <td class="label">Payment Type:</td>
+                    <td>
+                        <select>
+                            <option>Debit Card</option>
+                            <option>Qris</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Account Holder:</td>
+                    <td><input type="text" value="Name Here"></td>
+                </tr>
+                <tr>
+                    <td class="label">Account No:</td>
+                    <td><input type="text" value="123-456-789-0"></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td>
+                        <div class="checkbox-group">
+                            <input type="checkbox" checked> Send to Mobile Phone
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" checked> Email me copy of transaction
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Send to Mobile Phone:</td>
+                    <td><input type="text" value="1234567890, 1234567891"></td>
+                </tr>
+                <tr>
+                    <td class="label">Send to Email:</td>
+                    <td><input type="text" value="mfmm2g13@soton.ac.uk, fya_06@yahoo.com"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="pay-button">
+        <button>Pay using Quidlink</button>
+    </div>
+</div>
+
+</body>
+</html>
