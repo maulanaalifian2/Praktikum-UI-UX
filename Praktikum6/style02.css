@@ -1,0 +1,79 @@
+/* Reset bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Kontainer utama */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: pink;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Header dan Footer */
+header, footer {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* Area utama (Aside + Article) */
+.main {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+/* Aside (kiri) */
+aside {
+    background-color: cadetblue;
+    flex: 1;
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* Article (kanan) */
+article {
+    background-color: lightcoral;
+    flex: 3;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+article h2 {
+    margin-bottom: 20px;
+}
+
+/* Gambar dalam article */
+.images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.images div {
+    background-color: lightgray;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+}

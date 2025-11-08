@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: pink;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+
+header {
+  background-color: khaki;
+  padding: 20px;
+  text-align: center;
+}
+
+article {
+  flex: 1;
+  padding: 20px;
+}
+
+aside {
+  background-color: cyan;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: khaki;
+  padding: 20px;
+  text-align: center;
+}
