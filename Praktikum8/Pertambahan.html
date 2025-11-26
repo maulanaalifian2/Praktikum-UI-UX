@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+    <style>
+        #Kotak1{
+            width: 300px;
+            padding: 10px;
+            border: 2px solid blue;
+            background-color: lightblue;
+        }
+    </style>
+    <script>
+        function jumlahkan(){
+            let bil1 = parseFloat(document.getElementById("bil1").value);
+            let bil2 = parseFloat(document.getElementById("bil2").value);
+
+            if (isNaN(bil1)) bil1 = 0; 
+            if (isNaN(bil2)) bil2 = 0;
+
+            let hasil = bil1 + bil2;
+
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+
+        function run(){
+            alert("Selamat datang di halaman ini");
+        }
+    </script>
+</head>
+<body onload="run()" style="background-color: lightgrey;">
+    <h3>Kalkulator Penjumlahan Sederhana</h3>
+
+    <div id="Kotak1">
+        bilangan 1 : 
+        <input type="number" id="bil1" onchange="jumlahkan()"><br><br>
+
+        bilangan 2 : 
+        <input type="number" id="bil2" onchange="jumlahkan()"><br><br>
+
+        hasil : <span id="hasil">0</span><br><br>
+    </div>
+</body>
+</html>
