@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chat Sederhana</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f3f4f6; height: 100vh; margin: 0; }
+        .chat {
+            width: 300px; position: fixed; right: 20px; bottom: 20px;
+            border: 1px solid #bbb; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,.15);
+        }
+        .messages {
+            height: 260px; overflow: auto; padding: 12px;
+            border-bottom: 1px solid #e6e6e6; white-space: pre-wrap; color: #222;
+        }
+        .input-row { display: flex; }
+        .input-row input { flex: 1; padding: 10px; border: none; border-top: 1px solid #e6e6e6; }
+        .input-row button { width: 70px; border: none; background: #1976d2; color: #fff; cursor: pointer; }
+        .msg-user { color: #444; margin: 6px 0; }
+        .msg-me { color: #0b5; text-align: right; margin: 6px 0; }
+    </style>
+</head>
+<body>
+    <div class="chat">
+        <div class="messages" id="msgs">hello
+Apa kabar
+baik ya ?
+iya nih</div>
+        <form class="input-row" onsubmit="return send()">
+            <input id="t" autocomplete="off" placeholder="Tulis pesan...">
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        const msgs = document.getElementById('msgs'), t = document.getElementById('t');
+        function append(text, cls) {
+            const d = document.createElement('div');
+            d.className = cls; d.textContent = text;
+            msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+        }
+        function send() {
+            const v = t.value.trim(); if (!v) return false;
+            append(v, 'msg-me'); t.value = '';
+            setTimeout(() => append('balas: ' + v, 'msg-user'), 600);
+            return false;
+        }
+        msgs.scrollTop = msgs.scrollHeight;
+    </script>
+</body>
+</html>

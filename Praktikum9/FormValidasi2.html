@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+           
+</head>
+
+<body>
+    <h1>Form Validasi Tiket</h1>
+    <p>Silakan masukkan data </p>   
+
+    <hr>
+
+    <form onsubmit="return false" id="myForm">
+        <label for="name">Nama Pelanggan : </label>
+        <input type="text" id="name" placeholder="Masukkan Nama Anda" maxlength="30" required />
+        <span id="errorName" class="error-message"></span>
+
+        <br />
+        <br />
+
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="Masukkan Email Anda" required />
+        <span id="errorEmail" class="error-message"></span>
+
+        <br />
+        <br />
+
+        <label for="jam">Jam Keberangkatan : </label>
+        <input type="time" id="jam" required />
+        <span id="errorJam" class="error-message"></span>
+
+        <br />
+        <br />
+
+        <label for="tujuan">Tujuan Keberangkatan : </label>
+        <input type="text" id="tujuan" placeholder="Tujuan" required />
+        <span id="errorTujuan" class="error-message"></span>
+
+        <br />
+        <br />
+
+        <label for="tiket">Jumlah Tiket : </label>
+        <input type="number" id="tiket" placeholder="1 - 10" required min="1" max="10" />
+        <span id="errorTiket" class="error-message"></span>
+
+        <br />
+        <br />
+
+        <input type="button" onclick="formValidation()" value="Submit" />
+        <input type="button" onclick="reload()" value="Isi ulang" />
+    </form>
+
+    <hr>
+
+    <div id="result-area">
+        <h1 id="hasil" style="text-decoration: underline"></h1>
+        <p id="hasilName" style="font-size: 20px"></p>
+        <p id="hasilEmail" style="font-size: 20px"></p>
+        <p id="hasilJam" style="font-size: 20px"></p>
+        <p id="hasilTujuan" style="font-size: 20px"></p>
+        <p id="hasilTiket" style="font-size: 20px"></p>
+        <p id="ket"></p>
+    </div>
+
+    <script>
+        function formValidation() {
+            
+            let nama = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let tiket = document.getElementById("tiket").value;
+
+            
+            document.getElementById("hasil").innerHTML = "";
+            document.getElementById("ket").innerHTML = "";
+
+            // Reset hasil data
+            document.getElementById("hasilName").innerHTML = "";
+            document.getElementById("hasilEmail").innerHTML = "";
+            document.getElementById("hasilJam").innerHTML = "";
+            document.getElementById("hasilTujuan").innerHTML = "";
+            document.getElementById("hasilTiket").innerHTML = "";
+
+            document.getElementById("errorName").innerHTML = "";
+            document.getElementById("errorEmail").innerHTML = "";
+            document.getElementById("errorJam").innerHTML = "";
+            document.getElementById("errorTujuan").innerHTML = "";
+            document.getElementById("errorTiket").innerHTML = "";
+
+
+            let isValid = true; 
+            let isAnyValid = false; 
+
+            if (nama.toLowerCase() !== "lana") {
+                document.getElementById("errorName").innerHTML = "DATA TIDAK DITEMUKAN";
+                isValid = false;
+            } else {
+                document.getElementById("hasilName").innerHTML = "Nama Pelanggan : " + nama;
+                isAnyValid = true;
+            }
+
+            if (email !== "Lana@gmail.com") {
+                document.getElementById("errorEmail").innerHTML = "DATA TIDAK DITEMUKAN";
+                isValid = false;
+            } else {
+                document.getElementById("hasilEmail").innerHTML = "Email : " + email;
+                isAnyValid = true;
+            }
+
+            if (jam !== "04:00") {
+                document.getElementById("errorJam").innerHTML = "DATA TIDAK DITEMUKAN";
+                isValid = false;
+            } else {
+                document.getElementById("hasilJam").innerHTML = "Jam Keberangkatan : " + jam;
+                isAnyValid = true;
+            }
+
+            if (tujuan.toLowerCase() !== "jogja") {
+                document.getElementById("errorTujuan").innerHTML = "DATA TIDAK DITEMUKAN";
+                isValid = false;
+            } else {
+                document.getElementById("hasilTujuan").innerHTML = "Tujuan : " + tujuan;
+                isAnyValid = true;
+            }
+
+            if (tiket !== "2") {
+                document.getElementById("errorTiket").innerHTML = "DATA TIDAK DITEMUKAN";
+                isValid = false;
+            } else {
+                document.getElementById("hasilTiket").innerHTML = "Tiket : " + tiket;
+                isAnyValid = true;
+            }
+
+            if (isAnyValid) {
+                document.getElementById("hasil").innerHTML = "Validasi Data";
+                if (isValid) {
+                    document.getElementById("ket").innerHTML = "✅ Semua data valid! Data berhasil ditemukan.";
+                    document.getElementById("ket").style.color = "green";
+                } else {
+                    document.getElementById("ket").innerHTML = "⚠️ Data yang ditampilkan di bawah adalah yang valid. Silakan periksa kembali data yang salah.";
+                    document.getElementById("ket").style.color = "orange";
+                }
+            } else {
+                 document.getElementById("ket").innerHTML = "❌ Semua data yang Anda masukkan tidak ditemukan.";
+                 document.getElementById("ket").style.color = "red";
+            }
+        }
+
+        function reload() {
+            window.location.reload();
+        }
+    </script>
+</body>
+
+</html>

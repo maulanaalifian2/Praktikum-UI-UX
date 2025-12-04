@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        
+        body {
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        #imageContainer {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 300px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #displayImage {
+            max-width: 100%;
+            max-height: 500px;
+            display: none; 
+            border: 2px solid white; 
+            border-radius: 5px;
+        }
+        
+        hr {
+            border-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Image Picker</h1>
+    <hr>
+
+    <label for="imageDropdown">Pilih Gambar Hewan Mitologi:</label>
+    <select id="imageDropdown" onchange="displayImage()">
+        <option value="" disabled selected>-- Pilih Hewan --</option>
+        
+        <option value="naga.jpg">Naga</option>
+        <option value="garuda.jpg">Garuda</option>
+        <option value="loch-ness.jpg">Loch Ness</option>
+        <option value="phoenix.jpg">Phoenix</option>
+        <option value="ikan-nun.jpg">Ikan Nun</option>
+        <option value="pegasus.jpg">Pegasus</option>
+    </select>
+
+    <div id="imageContainer">
+        <img id="displayImage" src="" alt="Gambar yang dipilih akan muncul di sini">
+    </div>
+
+    <script>
+        function displayImage() {
+            const dropdown = document.getElementById('imageDropdown');
+            const displayImageElement = document.getElementById('displayImage');
+            const selectedFileName = dropdown.value;
+            
+            if (selectedFileName) {
+                displayImageElement.src = selectedFileName;
+                displayImageElement.style.display = 'block';
+                
+            } else {
+                displayImageElement.style.display = 'none';
+                displayImageElement.src = '';
+            }
+        }
+    </script>
+
+</body>
+</html>
