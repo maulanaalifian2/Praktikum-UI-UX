@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .carousel-item img {
+        height: 350px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand text white" href="#">Navbar</a> -->
+          <img
+            src="https://www.bmw.com/etc.clientlibs/settings/wcm/designs/bmwcom/base/resources/ci2020/img/logo-bmw-com-gray.svg"
+            class="img-fluid"
+            style="width: 80px"
+            alt=""
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="registrasi.html"
+                  >Registration 
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="createSeminar.html">
+                  Create Seminar
+                </a>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />Kampus
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <div class="container-fluid p-0 m-0">
+  <div
+    id="carouselExample"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcJ_IZLRos-_Q341LB-z25GRnAPrjk1ERMasrVfpG2s61qOX9mcxNrz9aIZjTOi9MsXiWG16gxFGKOmGX_jVUSssuuHPwayvcMrnm9_0CNQoHkN-_lIxdEijRD1O9KGosoQLUVopCJYN4Z5noMovvg2isDs?key=9ZeyjuVTExtLVVsSNjRajg"
+          class="d-block w-100 carousel-img"
+          style="width: 100%; height: 600px; object-fit: cover;"
+          alt="BMW M4"
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iDKbTZKuItWE/v1/-1x-1.webp"
+          class="d-block w-100 carousel-img"
+          style="width: 100%; height: 600px; object-fit: cover;"
+          alt="BMW i8"
+        />
+      </div>
+
+      <div class="carousel-item">
+        <img
+          src="https://images.pistonheads.com/nimg/47015/mceu_1931793911680108255141.jpg"
+          class="d-block w-100 carousel-img"
+          style="width: 100%; height: 600px; object-fit: cover;"
+          alt="BMW M2"
+        />
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button"
+      data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button"
+      data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center">Latest News</h1>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/electric-future/hydrogen/hy-00-teaser-hd.jpg"
+                class="img-fluid img-thumbnail"
+                alt=""
+              />
+              <h5 class="card-title">The International BMW</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="https://wallpapers.com/images/hd/1920x1080-bmw-8ljmbt88px6l1k2w.jpg"
+                class="img-fluid img-thumbnail"
+                alt=""
+              />
+              <h5 class="card-title">Launching New Car</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
